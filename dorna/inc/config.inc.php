@@ -3,15 +3,15 @@
 //  root of your directory that you want to handle
 define('ROOT', '../');
 
-define('DORNA_FOLDER', 'dorna/');
+define('DORNA_FOLDER', 'app/');
 
 // enter url without http:// or https://
 // this url is your root of Dorna file manager
 //define('BASE', '192.168.1.4/');
-define('BASE', 'jiga1.gilaki.net/');
+define('BASE', 'irpngdorna.mo/');
 
 // your app name
-define('APP_NAME', 'Gilaki.net | Dorna Simple FileManager');
+define('APP_NAME', 'IRPNG.COM | FILE UPLOAD MANAGER');
 
 define('TRASH_DIR', '../_trash/');
 

@@ -23,24 +23,16 @@ class Auth {
     var $input;
     
     private $tokens = [
-        'root'   => '111',
-        'admin'  => '222',
-        'viewer' => '333',
-        'test'   => '444'
+        'admin'   => '1',
+        'uploader'  => '2',
     ];
     
     private $access = [
-        'root' => [
-            '' => 'read|write|rename|delete|move|trash|mkdir'
-        ],
         'admin' => [
-            '(music$)|(^\/music$)|(\/music\/[a-zA-Z0-9]*)|(music\/[a-zA-Z0-9]*)' => 'read|write|move|trash|mkdir|rename',
+            '(uploads$)|(^\/uploads$)|(\/uploads\/[a-zA-Z0-9]*)|(uploads\/[a-zA-Z0-9]*)' => 'read|write|rename|delete|move|trash|mkdir'
         ],
-        'viewer' => [
-            '(music)|(^\/music$)|(^\/music\/[a-zA-Z0-9]*)' => 'read'
-        ],
-        'test' => [
-            '(music)|(^\/music$)|(^\/music\/[a-zA-Z0-9]*)' => 'read|write'
+        'uploader' => [
+            '(uploads$)|(^\/uploads$)|(\/uploads\/[a-zA-Z0-9]*)|(uploads\/[a-zA-Z0-9]*)' => 'read|write|move|trash|mkdir|rename',
         ]
     ];
     
@@ -50,6 +42,7 @@ class Auth {
     
     
     function __construct() {
+        session_start();
         self::$instance =& $this;
         $this->input = new Input();
     }

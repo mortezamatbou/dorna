@@ -3,7 +3,7 @@ require_once './inc/auth.inc.php';
 
 $info = [
     'tab_title' => APP_NAME,
-    'page_title' => 'Files | <span class="btn  btn-xs">Dorna Simple FileManager</span>'
+    'page_title' => 'Files | <span class="btn btn-xs">IRPNG.COM FILE MANAGER</span>'
 ];
 
 require './inc/header.inc.php';

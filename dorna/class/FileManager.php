@@ -80,10 +80,10 @@ abstract class FileManager extends UserActions {
                 $route_address = base_url() . 'index.php?route=' . get_instance()->input->get_route() . $file . '&token=' . $this->token;
                 
                 $r = substr(get_instance()->input->get_route(), 0, 1) 
-                        ? preg_replace('/\//', '', get_instance()->input->get_route(), 1)
+                        ? preg_replace('/\//', '', get_instance()->input->get_route(), 0)
                         : get_instance()->input->get_route();
                 
-                $file_link = host_url() . $r . '/'. $file;
+                $file_link = host_url() . $r . ''. $file;
                 
                 $link = host_url() . $r;
                 
